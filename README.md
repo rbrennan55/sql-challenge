@@ -16,7 +16,6 @@ Solution for pandas-challenge files submitted:
 - /EmployeeSQL/data/titles.csv
 - /EmployeeSQL/sql-challenge.png
 - /EmployeeSQL/sql-challenge-schema.sql
-- /EmployeeSQL/sql-challenge-schema-populated.sql
 - /EmployeeSQL/sql-challenge-schema-asignment.sql
 - ReadMe (this file)
 
