@@ -25,7 +25,7 @@ CREATE TABLE "employee" (
     "birth_date" date   NOT NULL,
     "first_name" varchar(25)   NOT NULL,
     "last_name" varchar(25)   NOT NULL,
-    "sex" varchar(10)   NOT NULL,
+    "sex" varchar(1)   NOT NULL,
     "hire_date" date   NOT NULL,
     CONSTRAINT "pk_employee" PRIMARY KEY (
         "emp_no"
