@@ -46,8 +46,7 @@ SELECT departments.dept_name, employee.emp_no, employee.last_name, employee.firs
 FROM departments
 JOIN dept_emp ON departments.dept_no = dept_emp.dept_no
 JOIN employee ON dept_emp.emp_no = employee.emp_no
-WHERE departments.dept_name IN ('Sales', 'Development')
-ORDER BY departments.dept_name;
+WHERE departments.dept_name IN ('Sales', 'Development');
 
 -- 8 - List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 
