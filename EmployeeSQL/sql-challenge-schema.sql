@@ -1,7 +1,23 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/PQu7PL
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
+
+CREATE TABLE "titles" (
+    "titles" varchar(10)   NOT NULL,
+    "title" varchar(25)   NOT NULL,
+    CONSTRAINT "pk_titles" PRIMARY KEY (
+        "titles"
+     )
+);
+
+CREATE TABLE "departments" (
+    "dept_no" varchar(10)   NOT NULL,
+    "dept_name" varchar(30)   NOT NULL,
+    CONSTRAINT "pk_departments" PRIMARY KEY (
+        "dept_no"
+     )
+);
 
 CREATE TABLE "employee" (
     "emp_no" serial   NOT NULL,
@@ -16,12 +32,9 @@ CREATE TABLE "employee" (
      )
 );
 
-CREATE TABLE "titles" (
-    "titles" varchar(10)   NOT NULL,
-    "title" varchar(25)   NOT NULL,
-    CONSTRAINT "pk_titles" PRIMARY KEY (
-        "titles"
-     )
+CREATE TABLE "dept_manager" (
+    "dept_no" varchar(10)   NOT NULL,
+    "emp_no" int   NOT NULL
 );
 
 CREATE TABLE "dept_emp" (
@@ -29,23 +42,12 @@ CREATE TABLE "dept_emp" (
     "dept_no" varchar(10)   NOT NULL
 );
 
-CREATE TABLE "dept_manager" (
-    "dept_no" varchar(10)   NOT NULL,
-    "emp_no" int   NOT NULL
-);
-
 CREATE TABLE "salaries" (
     "emp_no" int   NOT NULL,
     "salary" int   NOT NULL 
 );
 
-CREATE TABLE "departments" (
-    "dept_no" varchar(10)   NOT NULL,
-    "dept_name" varchar(30)   NOT NULL,
-    CONSTRAINT "pk_departments" PRIMARY KEY (
-        "dept_no"
-     )
-);
+-- Alter Tables
 
 ALTER TABLE "employee" ADD CONSTRAINT "fk_employee_emp_title_id" FOREIGN KEY("emp_title_id")
 REFERENCES "titles" ("titles");
