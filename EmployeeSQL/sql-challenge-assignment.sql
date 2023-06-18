@@ -10,7 +10,7 @@ WHERE employee.emp_no = salaries.emp_no;
 
 SELECT first_name, last_name, hire_date 
 FROM employee 
-WHERE hire_date between '1986-01-01 00:01:00' and '1986-01-01 23:59:00';
+WHERE hire_date between '1986-01-01 00:00:01' and '1986-01-01 23:59:59';
 -- WHERE hire_date::text LIKE '1986-%';
 
 -- 3 - List the manager of each department along with their department number, department name, employee number, last name, and first name.
